@@ -1,0 +1,332 @@
+/* ===== Base Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* ===== Header ===== */
+  .site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Hamburger Menu */
+  .menu-toggle {
+    display: none;
+    background: none;
+    font-size: 1.8rem;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  /* Nav */
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navigation a {
+    color: #222;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .hire-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: #007bff;
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  /* Section Base */
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #007bff;
+  }
+  
+  .skills ul,
+  .education ul,
+  .services ul,
+  .projects ul {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .skills li,
+  .education li,
+  .services li,
+  .projects li {
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+  
+  /* Project Links */
+  .projects a {
+    color: #007bff;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .projects a:hover {
+    border-bottom: 1px solid #007bff;
+  }
+  
+  .dark-mode .projects a {
+    color: #66b2ff;
+  }
+  
+  /* Contact Form */
+  .contact form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact label {
+    font-weight: 600;
+  }
+  
+  .contact input,
+  .contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Social Media */
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .socials img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 4px;
+    transition: transform 0.2s ease;
+  }
+  
+  .socials img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Footer */
+  .site-footer {
+    background: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-nav a {
+    color: #ddd;
+    font-size: 0.9rem;
+  }
+  
+  /* Dark Mode */
+  .dark-mode {
+    background-color: #121212;
+    color: #eee;
+  }
+  
+  .dark-mode .site-header,
+  .dark-mode .site-footer {
+    background-color: #1e1e1e;
+  }
+  
+  .dark-mode .navigation a,
+  .dark-mode .site-footer a {
+    color: #eee;
+  }
+  
+  .dark-mode .contact input,
+  .dark-mode .contact textarea {
+    background-color: #1e1e1e;
+    color: #eee;
+    border-color: #444;
+  }
+  
+  .dark-mode .nav-links a {
+    color: #eee;
+  }
+  
+  .dark-mode .nav-links a:hover {
+    color: #66b2ff;
+  }
+  
+  /* Dark Mode Toggle Button */
+  .dark-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #1e1e1e;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      z-index: 999;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .hire-btn {
+      align-self: flex-start;
+      margin-top: 1rem;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-left,
+    .footer-right {
+      align-items: center;
+    }
+  
+    .footer-nav {
+      justify-content: center;
+    }
+
+    .about p {
+        text-align: center;
+      }
+      
+  }
+  
+  
