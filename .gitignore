@@ -1,0 +1,28 @@
+# macOS system files
+.DS_Store
+
+# Node and environment files (if used later)
+node_modules/
+.env
+
+# VS Code settings
+.vscode/
+
+# Log files
+*.log
+
+# Build or temp directories (optional)
+dist/
+build/
+tmp/
+temp/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Backup files
+*.bak
+*.tmp
+*.swp
