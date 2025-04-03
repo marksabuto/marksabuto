@@ -72,7 +72,7 @@ This is a **fully responsive, one-page portfolio website** with the following se
 ## 📤 Deployment
 
 This website is live and responsive on:
-**🔗 [abutomarks.netlify.app](https://marksabuto.netlify.app/)**
+**🔗 [marksabuto.netlify.app](https://marksabuto.netlify.app/)**
 
 ---
 
