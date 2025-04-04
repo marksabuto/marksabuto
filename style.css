@@ -326,7 +326,18 @@
     .about p {
         text-align: center;
       }
+    
+      @media (max-width: 768px) {
+        /* Fix: Make nav links visible inside hamburger dropdown on light mode */
+        .nav-links.active a {
+          color: #fff !important; /* force white text on dark dropdown background */
+        }
       
+        .nav-links.active .hire-btn {
+          color: #fff;
+        }
+      }
+        
   }
   
   
