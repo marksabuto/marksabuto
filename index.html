@@ -7,6 +7,8 @@
   <meta name="author" content="Marks Abuto"/>
   <title>Marks Abuto</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -18,8 +20,10 @@
         <ul class="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="#contact" class="hire-btn">Hire Me</a>
@@ -30,143 +34,347 @@
   <main>
     <section id="home" class="hero">
       <div class="container">
+        <div class="hero-content" data-aos="fade-up">
         <h1>Marks Abuto</h1>
-        <p>Software Engineer & AI Enthusiast</p>
+          <p class="subtitle">Software Engineer & AI Enthusiast</p>
+          <p class="hero-description">Building innovative solutions with code and creativity</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary-btn">View My Work</a>
+            <a href="#contact" class="btn secondary-btn">Get in Touch</a>
+            <a href="cv/Marks_Abuto_CV.pdf" class="btn tertiary-btn" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+          <img src="images/profile.jpg" alt="Marks Abuto" class="profile-image">
+        </div>
       </div>
     </section>
 
     <section id="about" class="about section">
       <div class="container">
-        <h2>About Me</h2>
-        <p style="text-align: center;">
+        <h2 data-aos="fade-up">About Me</h2>
+        <div class="about-content" data-aos="fade-up">
+          <div class="about-text">
+            <p>
           I am a passionate and versatile Software Engineer in training with a solid foundation in web development, AI, and data annotation. I aim to make technology accessible, impactful, and beautifully designed.
         </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>    
 
     <section id="skills" class="skills section">
       <div class="container">
-        <h2>Technical Skills</h2>
-        <ul>
-          <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Typescript, Tailwind CSS, React</li>
-          <li><strong>Backend:</strong> Python</li>
-          <li><strong>Database:</strong> MySQL, Supabase, PostgreSQL</li>
-          <li><strong>Version Control:</strong> Git & GitHub</li>
-          <li><strong>Technical Writing</strong> </li>
-        </ul>
+        <h2 data-aos="fade-up">Technical Skills</h2>
+        <div class="skills-grid" data-aos="fade-up">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-bar">
+              <div class="skill-name">HTML5</div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-name">CSS3</div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-name">React</div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-bar">
+              <div class="skill-name">Python</div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-name">Node.js</div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3>Database</h3>
+            <div class="skill-bar">
+              <div class="skill-name">MySQL</div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-name">PostgreSQL</div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <section id="education" class="education section">
-      <div class="container">
-        <h2>Education</h2>
-        <ul>
-          <li><strong>Software Engineering</strong> - Power Learn Project (2025):  
-            An intensive program focused on building scalable web applications, APIs, and practical coding skills.</li>
-          <li><strong>Virtual Assistant</strong> - ALX Africa (2024):  
-            Training in digital communication, calendar management, task tracking, and productivity tools.</li>
-          <li><strong>AI-Augmented Professional Development Skills</strong> - ALX Africa (2024):  
-            A course in using AI tools to enhance productivity, writing, presentations, and task automation.</li>
-          <li><strong>BSc in Molecular Biology & Forensic Technology</strong> - Technical University of Mombasa (2021):  
-            Developed analytical thinking and investigative skills useful for data-driven and scientific roles.</li>
-        </ul>
-        <a href="https://drive.google.com/file/d/1DUBcoFh2lhL1TYMvVv248t-MnXieGjPP/view?usp=sharing" target="_blank">Download My CV</a>
-      </div>
-    </section>
-    
-
-    <section id="services" class="services section">
-      <div class="container">
-        <h2>My Services</h2>
-        <ul>
-          <li><strong>Custom Web Development:</strong> Tailored websites for personal or business needs using clean code.</li>
-          <li><strong>Responsive Design:</strong> Ensures mobile-first, fluid layouts across all devices.</li>
-          <li><strong>SEO Optimization:</strong> Improve your site's visibility in search engine results.</li>
-          <li><strong>UI/UX Design:</strong> Focused on user-friendly, attractive, and intuitive interfaces.</li>
-          <li><strong>Website Maintenance:</strong> Ongoing updates, bug fixes, and improvements to keep your site fresh.</li>
-          <li><strong>Performance Optimization:</strong> Speed and performance improvements for a better user experience.</li>
-          <li><strong>Technical Writing:</strong> Clear, concise documentation and tutorials for software or processes.</li>
-        </ul>
-      </div>
-    </section>
-    
 
     <section id="projects" class="projects section">
       <div class="container">
-        <h2>My Projects</h2>
-        <ul>
-          <li>
-            <strong>Simple Python Project:</strong>  
-            A beginner project demonstrating Git and GitHub version control basics.<br>  
-            <em>Languages:</em> Python, Markdown  
-            <a href="https://github.com/marksabuto/my-python-project.git" target="_blank">Source Code</a>
-          </li>
-          <li>
-            <strong>Webpage HTML Project:</strong>  
-            A simple and clean webpage built with semantic HTML5.<br>  
-            <em>Languages:</em> HTML  
-            <a href="https://github.com/marksabuto/my-html-project.git" target="_blank">Source Code</a>
-          </li>
-          <li>
-            <strong>Portfolio Website:</strong>  
-            This fully responsive portfolio showcasing my work, skills, and contact form.<br>  
-            <em>Languages:</em> HTML, CSS, JavaScript  
-            <a href="https://github.com/marksabuto/marksabuto.git" target="_blank">Source Code</a> |  
-            <a href="https://marksabuto.netlify.app/" target="_blank">Live Demo</a>
-          </li>
-          <li>
-            <strong>Quiz Game Trivia:</strong>  
-            A collaborative Python-based quiz game with score tracking and question logic.<br>  
-            <em>Languages:</em> Python  
-            <a href="https://github.com/dlakk/quiz-game-triva.git" target="_blank">Source Code</a>
-          </li>
-          <li>
-            <strong>CrimeSceneAI:</strong>  
-            An early-stage AI project aimed at analyzing crime scene data and images.<br>  
-            <em>Languages:</em> Python, OpenCV, Pytorch, AI tools  
-            <strong>🧠 Open for collaboration!</strong>  
-            <a href="https://github.com/marksabuto/CrimeSceneAI" target="_blank">Source Code</a>
-          </li>
-          <li>
-            <strong>Alumni Website:</strong>  
-            This project is an alumni networking platform that allows former students to connect, share updates, and participate in events.<br>  
-            <em>Languages:</em> Typescript, Tailwind CSS, React <br>  
-            <a href="https://github.com/marksabuto/othoroalumni.git" target="_blank">Source Code</a>
-          </li>
-        </ul>
+        <h2 data-aos="fade-up">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up">
+            <div class="project-image">
+              <img src="images/projects/crimesceneai.png" alt="CrimeSceneAI">
+            </div>
+            <div class="project-content">
+              <h3>CrimeSceneAI</h3>
+              <p>An AI-powered crime scene analysis tool using computer vision and machine learning.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>PyTorch</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/marksabuto/CrimeSceneAI" target="_blank">View Code</a>
+                <a href="#" class="disabled">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img src="images/projects/alumni.jpg" alt="Alumni Website">
+            </div>
+            <div class="project-content">
+              <h3>Alumni Website</h3>
+              <p>A networking platform for alumni to connect and share updates.</p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Tailwind CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/marksabuto/othoroalumni" target="_blank">View Code</a>
+                <a href="#" class="disabled">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image">
+              <img src="images/projects/quiz.jpg" alt="Quiz Game">
+            </div>
+            <div class="project-content">
+              <h3>Quiz Game Trivia</h3>
+              <p>An interactive quiz game with score tracking and question logic.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>CLI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/dlakk/quiz-game-triva" target="_blank">View Code</a>
+                <a href="#" class="disabled">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
+    <section id="testimonials" class="testimonials section">
+      <div class="container">
+        <h2 data-aos="fade-up">Client Testimonials</h2>
+        <div class="testimonials-slider" data-aos="fade-up">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Marks delivered an exceptional website that perfectly captured our vision. His attention to detail and technical expertise were impressive."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="images/testimonials/client1.jpg" alt="Client 1">
+              <div class="author-info">
+                <h4>Keith Otieno</h4>
+                <p>Aurenautical Engineer, Encomm Aviation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="education" class="education section">
+      <div class="container">
+        <h2 data-aos="fade-up">Education</h2>
+        <div class="education-timeline" data-aos="fade-up">
+          <div class="education-item">
+            <div class="education-date">2025 - Present</div>
+            <div class="education-content">
+              <h3>Software Engineering</h3>
+              <p class="institution">Power Learn Project</p>
+              <p>An intensive program focused on building scalable web applications, APIs, and practical coding skills.</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-date">2024</div>
+            <div class="education-content">
+              <h3>Virtual Assistant</h3>
+              <p class="institution">ALX Africa</p>
+              <p>Training in digital communication, calendar management, task tracking, and productivity tools.</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-date">2024</div>
+            <div class="education-content">
+              <h3>AI-Augmented Professional Development</h3>
+              <p class="institution">ALX Africa</p>
+              <p>A course in using AI tools to enhance productivity, writing, presentations, and task automation.</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-date">2016 - 2021</div>
+            <div class="education-content">
+              <h3>BSc in Molecular Biology and Forensic Science</h3>
+              <p class="institution">Technical University of Mombasa</p>
+              <p>Developed analytical thinking and investigative skills useful for data-driven and scientific roles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section">
+      <div class="container">
+        <h2 data-aos="fade-up">Services</h2>
+        <div class="services-grid" data-aos="fade-up">
+          <div class="service-card">
+            <i class="fas fa-code"></i>
+            <h3>Web Development</h3>
+            <p>Custom website development using modern technologies and frameworks.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobile Development</h3>
+            <p>Cross-platform mobile applications for iOS and Android.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-robot"></i>
+            <h3>AI Solutions</h3>
+            <p>Artificial Intelligence and Machine Learning solutions for businesses.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-database"></i>
+            <h3>Database Management</h3>
+            <p>Database design, optimization, and management services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog section">
+      <div class="container">
+        <h2 data-aos="fade-up">Latest Blog Posts</h2>
+        <div class="blog-grid">
+          <article class="blog-card" data-aos="fade-up">
+            <div class="blog-image">
+              <img src="images/blog/ai.png" alt="AI in Web Development">
+            </div>
+            <div class="blog-content">
+              <h3>The Future of AI in Web Development</h3>
+              <p class="blog-meta">April 21, 2025 • 5 min read</p>
+              <p>Exploring how artificial intelligence is transforming the web development landscape...</p>
+              <a href="blog/ai-in-web-development.html" class="read-more">Read More →</a>
+            </div>
+          </article>
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-image">
+              <img src="images/blog/react.jpg" alt="React Best Practices">
+            </div>
+            <div class="blog-content">
+              <h3>React Best Practices in 2024</h3>
+              <p class="blog-meta">March 10, 2024 • 4 min read</p>
+              <p>Essential tips and practices for building scalable React applications...</p>
+              <a href="blog/react-best-practices.html" class="read-more">Read More →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section id="contact" class="contact section">
       <div class="container">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/xqapdokw" method="POST">
+        <h2 data-aos="fade-up">Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <h3>Let's Work Together</h3>
+            <p>Have a project in mind? I'd love to hear about it. Let's create something amazing together!</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:marksabuto@gmail.com">marksabuto@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254715341602">+254 715 341 602</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+              </div>
+            </div>
+            <div class="socials">
+              <a href="https://www.instagram.com/mrksalvn" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/marksabuto" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/marks-abuto/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.x.com/marksabuto/" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          
+          <form class="contact-form" action="https://formspree.io/f/xqapdokw" method="POST" data-aos="fade-left">
+            <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
-        
+            </div>
+            <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
-        
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
-        
-          <button type="submit">Send Message</button>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
         </form>
-        
-
-        <address>
-          📧 <a href="mailto:marksabuto@gmail.com">marksabuto@gmail.com</a><br>
-          📞 <a href="tel:+254715341602">+254 715 341 602</a><br>
-          📍 Nairobi, Kenya
-        </address>
-        
-
-        <div class="socials">
-          <a href="https://www.instagram.com/mrksalvn" target="_blank"><img src="images/icons/instagram.png" alt="Instagram logo"></a>
-          <a href="https://github.com/marksabuto" target="_blank"><img src="images/icons/github.png" alt="GitHub logo"></a>
-          <a href="https://www.linkedin.com/in/marks-abuto/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn logo"></a>
-          <a href="https://www.x.com/marksabuto/" target="_blank"><img src="images/icons/x.png" alt="X logo"></a>
         </div>
       </div>
     </section>
@@ -182,17 +390,34 @@
         <nav class="footer-nav">
           <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#services">Services</a>
+          <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#blog">Blog</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
     </div>
-    <br>
-  
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
     // Hamburger toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -210,23 +435,16 @@
 
     // Dark mode toggle
     const toggleBtn = document.createElement('button');
-    toggleBtn.textContent = '🌙 Dark Mode';
+    toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
     toggleBtn.className = 'dark-toggle';
     document.body.appendChild(toggleBtn);
 
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-
-      // Change nav link color
-      const navLinksList = document.querySelectorAll('.navigation a');
-      navLinksList.forEach(link => {
-        link.style.color = document.body.classList.contains('dark-mode') ? '#eee' : '#222';
-      });
-
-      // Toggle button text
-      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+      toggleBtn.innerHTML = document.body.classList.contains('dark-mode') 
+        ? '<i class="fas fa-sun"></i>' 
+        : '<i class="fas fa-moon"></i>';
     });
   </script>
-
 </body>
 </html>
