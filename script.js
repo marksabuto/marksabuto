@@ -6,56 +6,126 @@ AOS.init({
   easing: 'ease-in-out'
 });
 
-// Smooth scrolling for all anchor links
+// Modern JavaScript Enhancements
+// Intersection Observer for lazy loading images
+const lazyImages = document.querySelectorAll('img[data-src]');
+const imageObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+      imageObserver.unobserve(img);
+    }
+  });
+}, { threshold: 0.1 });
+
+lazyImages.forEach(img => imageObserver.observe(img));
+
+// Smooth scrolling with modern API
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+  anchor.addEventListener('click', (e) => {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(anchor.getAttribute('href'));
     if (target) {
       target.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
+      
+      // Update URL without reload
+      history.pushState({}, '', anchor.getAttribute('href'));
     }
   });
 });
 
-// Mobile Navigation
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-const navItems = document.querySelectorAll('.nav-links a');
+// Mobile Navigation with improved accessibility
+class MobileNavigation {
+  constructor() {
+    this.menuToggle = document.querySelector('.menu-toggle');
+    this.navLinks = document.querySelector('.nav-links');
+    this.navItems = document.querySelectorAll('.nav-links a');
+    this.init();
+  }
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active');
-});
+  init() {
+    this.menuToggle.addEventListener('click', this.toggleMenu.bind(this));
+    this.navItems.forEach(link => link.addEventListener('click', this.closeMenu.bind(this)));
+    this.addAriaLabels();
+  }
 
-navItems.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    menuToggle.classList.remove('active');
-  });
-});
+  toggleMenu() {
+    const isOpen = this.navLinks.classList.toggle('active');
+    this.menuToggle.setAttribute('aria-expanded', isOpen);
+    this.navLinks.setAttribute('aria-hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
 
-// Dark Mode Toggle
-const toggleBtn = document.createElement('button');
-toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-toggleBtn.className = 'dark-toggle';
-document.body.appendChild(toggleBtn);
+  closeMenu() {
+    this.navLinks.classList.remove('active');
+    this.menuToggle.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 
-// Check for saved theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  document.body.classList.add('dark-mode');
-  toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+  addAriaLabels() {
+    this.menuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+    this.menuToggle.setAttribute('aria-expanded', 'false');
+    this.navLinks.setAttribute('aria-hidden', 'true');
+  }
 }
 
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  const isDarkMode = document.body.classList.contains('dark-mode');
-  toggleBtn.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-});
+// Initialize mobile navigation
+const mobileNav = new MobileNavigation();
+
+// Dark Mode Toggle with improved state management
+class ThemeManager {
+  constructor() {
+    this.toggleBtn = document.createElement('button');
+    this.initialize();
+  }
+
+  initialize() {
+    this.setupButton();
+    this.loadTheme();
+    this.setupEventListeners();
+  }
+
+  setupButton() {
+    this.toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    this.toggleBtn.className = 'dark-toggle';
+    this.toggleBtn.setAttribute('aria-label', 'Toggle dark mode');
+    document.body.appendChild(this.toggleBtn);
+  }
+
+  loadTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    this.setTheme(savedTheme);
+    this.updateButton(savedTheme);
+  }
+
+  setTheme(theme) {
+    document.body.classList.toggle('dark-mode', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }
+
+  updateButton(theme) {
+    const icon = theme === 'dark' ? 'sun' : 'moon';
+    this.toggleBtn.innerHTML = `<i class="fas fa-${icon}"></i>`;
+    this.toggleBtn.setAttribute('aria-label', `Toggle ${theme === 'dark' ? 'light' : 'dark'} mode`);
+  }
+
+  setupEventListeners() {
+    this.toggleBtn.addEventListener('click', () => {
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      this.setTheme(newTheme);
+      this.updateButton(newTheme);
+    });
+  }
+}
+
+// Initialize theme manager
+const themeManager = new ThemeManager();
 
 // Form Validation and Submission
 const contactForm = document.querySelector('.contact-form');

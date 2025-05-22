@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Marks Abuto - Software Engineer & AI Enthusiast Portfolio Website"/>
+  <meta name="description" content="Marks Abuto - Software Engineer & AI/Data Enthusiast Portfolio Website"/>
   <meta name="author" content="Marks Abuto"/>
-  <title>Marks Abuto</title>
+  <meta name="theme-color" content="#007bff" />
+  <title>Marks Abuto - Software Engineer & AI/Data Enthusiast</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta property="og:title" content="Marks Abuto - Software Engineer & AI Enthusiast" />
+  <meta property="og:description" content="Building innovative solutions with code and creativity" />
+  <meta property="og:image" content="images/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marks Abuto - Software Engineer & AI Enthusiast" />
+  <meta name="twitter:description" content="Building innovative solutions with code and creativity" />
+  <meta name="twitter:image" content="images/twitter-card.png" />
 </head>
 <body>
 
@@ -36,7 +49,7 @@
       <div class="container">
         <div class="hero-content" data-aos="fade-up">
         <h1>Marks Abuto</h1>
-          <p class="subtitle">Software Engineer & AI Enthusiast</p>
+          <p class="subtitle">Software Engineer & AI/Data Enthusiast</p>
           <p class="hero-description">Building innovative solutions with code and creativity</p>
           <div class="hero-buttons">
             <a href="#projects" class="btn primary-btn">View My Work</a>
@@ -57,9 +70,7 @@
         <h2 data-aos="fade-up">About Me</h2>
         <div class="about-content" data-aos="fade-up">
           <div class="about-text">
-            <p>
-          I am a passionate and versatile Software Engineer in training with a solid foundation in web development, AI, and data annotation. I aim to make technology accessible, impactful, and beautifully designed.
-        </p>
+            <p>I am a passionate and versatile Software Engineer with expertise in web development, AI, and data analysis. I specialize in creating impactful solutions through modern technologies and data-driven insights. My work spans from building scalable web applications to conducting comprehensive data analysis using Jupyter notebooks.</p>
             <div class="about-stats">
               <div class="stat-item">
                 <span class="stat-number">5+</span>
@@ -77,68 +88,168 @@
           </div>
         </div>
       </div>
-    </section>    
+    </section>
 
     <section id="skills" class="skills section">
       <div class="container">
         <h2 data-aos="fade-up">Technical Skills</h2>
         <div class="skills-grid" data-aos="fade-up">
+          <!-- Frontend Development -->
           <div class="skill-category">
-            <h3>Frontend</h3>
-            <div class="skill-bar">
-              <div class="skill-name">HTML5</div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 90%"></div>
+            <h3>Frontend Development</h3>
+            <div class="skill-subcategory">
+              <h4>Languages</h4>
+              <div class="skill-bar">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">TypeScript</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
               </div>
             </div>
-            <div class="skill-bar">
-              <div class="skill-name">CSS3</div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 85%"></div>
+            <div class="skill-subcategory">
+              <h4>Frameworks/Libraries</h4>
+              <div class="skill-bar">
+                <div class="skill-name">React</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
               </div>
             </div>
-            <div class="skill-bar">
-              <div class="skill-name">JavaScript</div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 80%"></div>
+            <div class="skill-subcategory">
+              <h4>Styling</h4>
+              <div class="skill-bar">
+                <div class="skill-name">CSS3</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">Tailwind CSS</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 89%"></div>
+                </div>
               </div>
             </div>
-            <div class="skill-bar">
-              <div class="skill-name">React</div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 75%"></div>
+            <div class="skill-subcategory">
+              <h4>Markup</h4>
+              <div class="skill-bar">
+                <div class="skill-name">HTML5</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
               </div>
             </div>
           </div>
-          
+    
+          <!-- Backend Development -->
           <div class="skill-category">
-            <h3>Backend</h3>
-            <div class="skill-bar">
-              <div class="skill-name">Python</div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 85%"></div>
+            <h3>Backend Development</h3>
+            <div class="skill-subcategory">
+              <h4>Languages</h4>
+              <div class="skill-bar">
+                <div class="skill-name">Python</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
               </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-name">Node.js</div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 70%"></div>
+              <div class="skill-bar">
+                <div class="skill-name">JavaScript (Node.js)</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 70%"></div>
+                </div>
               </div>
             </div>
           </div>
-          
+
           <div class="skill-category">
-            <h3>Database</h3>
-            <div class="skill-bar">
-              <div class="skill-name">MySQL</div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 80%"></div>
+            <h3>Data Analysis & Visualization</h3>
+            <div class="skill-subcategory">
+              <h4>Tools</h4>
+              <div class="skill-bar">
+                <div class="skill-name">Jupyter Notebook</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
               </div>
             </div>
-            <div class="skill-bar">
-              <div class="skill-name">PostgreSQL</div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 75%"></div>
+            <div class="skill-subcategory">
+              <h4>Libraries</h4>
+              <div class="skill-bar">
+                <div class="skill-name">Pandas</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">NumPy</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">Matplotlib</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">Seaborn</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Databases -->
+          <div class="skill-category">
+            <h3>Databases</h3>
+            <div class="skill-subcategory">
+              <h4>SQL</h4>
+              <div class="skill-bar">
+                <div class="skill-name">MySQL</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">PostgreSQL</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">Superbase</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-subcategory">
+              <h4>Database Design</h4>
+              <div class="skill-bar">
+                <div class="skill-name">ER Diagrams</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">Normalization</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">Performance Optimization</div>
+                <div class="skill-progress">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -171,7 +282,7 @@
 
           <div class="project-card" data-aos="fade-up" data-aos-delay="100">
             <div class="project-image">
-              <img src="images/projects/alumni.jpg" alt="Alumni Website">
+              <img src="images/projects/Alumni.png" alt="Alumni Website">
             </div>
             <div class="project-content">
               <h3>Alumni Website</h3>
@@ -205,6 +316,71 @@
               </div>
             </div>
           </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-image">
+              <img src="images/projects/NextGen AMTs.png" alt="NextGen AMTs">
+            </div>
+            <div class="project-content">
+              <h3>NextGen AMTs</h3>
+              <p>A dynamic online platform for aircraft maintenance technicians, featuring a resource library, knowledge sharing, career growth support, and community engagement through WhatsApp groups.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>UX Design</span>
+                <span>Responsive Design</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="disabled">View Code</a>
+                <a href="https://nextgenamts.lovable.app/" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-image">
+              <img src="images/projects/Covid-19 Analysis.png" alt="COVID-19 Data Tracker">
+            </div>
+            <div class="project-content">
+              <h3>COVID-19 Global Data Tracker</h3>
+              <p>An interactive data analysis project that tracks and visualizes global COVID-19 trends using data from Our World in Data. Features include data cleaning, exploratory data analysis, and visualization of cases, deaths, and vaccinations.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+                <span>EDA</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/marksabuto/covid-19-tracker" target="_blank">View Code</a>
+                <a href="#" class="disabled">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-image">
+              <img src="images/projects/Database_design.png" alt="E-commerce Database System">
+            </div>
+            <div class="project-content">
+              <h3>E-commerce Database System</h3>
+              <p>A robust and scalable database solution for modern e-commerce platforms, featuring comprehensive product management, inventory tracking, and variation handling capabilities.</p>
+              <div class="project-tech">
+                <span>MySQL</span>
+                <span>Database Design</span>
+                <span>SQL</span>
+                <span>ER Diagrams</span>
+                <span>Performance Optimization</span>
+                <span>Normalization</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/marksabuto/ecommerce-database" target="_blank">View Code</a>
+                <a href="#" class="disabled">Live Demo</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -229,12 +405,94 @@
       </div>
     </section>
     
+    <section id="blog" class="blog section">
+      <div class="container">
+        <h2 data-aos="fade-up">AI Blog Posts</h2>
+        <div class="blog-grid" data-aos="fade-up">
+          <article class="blog-post card">
+            <div class="blog-image">
+              <img src="images/blog/AI in Web Development.png" alt="AI in Web Development">
+            </div>
+            <div class="blog-content">
+              <h3>The Future of AI in Web Development</h3>
+              <p>Artificial Intelligence is revolutionizing the way we build and interact with websites. From automated code generation to intelligent user interfaces, AI is becoming an integral part of modern web development.</p>
+              <div class="blog-meta">
+                <span class="date">May 21, 2025</span>
+                <span class="tags">#AI #WebDev #MachineLearning</span>
+              </div>
+              <a href="blog/ai-in-web-development.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-post card">
+            <div class="blog-image">
+              <img src="images/blog/AI Art Generation.png" alt="Generative AI Revolution">
+            </div>
+            <div class="blog-content">
+              <h3>Generative AI: The Next Frontier</h3>
+              <p>Explore the latest advancements in generative AI, from text-to-image models like DALL-E 3 and Midjourney V5 to cutting-edge code generation tools. Learn about the ethical considerations and practical applications in various industries.</p>
+              <div class="blog-meta">
+                <span class="date">May 22, 2025</span>
+                <span class="tags">#AI #GenerativeModels #MachineLearning</span>
+              </div>
+              <a href="blog/generative-ai-revolution.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-post card">
+            <div class="blog-image">
+              <img src="images/blog/Optimized Neural Networks.png" alt="LLM Optimization">
+            </div>
+            <div class="blog-content">
+              <h3>Optimizing Large Language Models</h3>
+              <p>Dive into the world of LLM optimization techniques, including quantization, pruning, and model compression. Discover how these methods are making AI more accessible and efficient on edge devices while maintaining performance.</p>
+              <div class="blog-meta">
+                <span class="date">May 19, 2025</span>
+                <span class="tags">#LLM #Optimization #MachineLearning</span>
+              </div>
+              <a href="blog/llm-optimization.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-post card">
+            <div class="blog-image">
+              <img src="images/blog/AI Ethics Symposium.png" alt="AI Ethics and Governance">
+            </div>
+            <div class="blog-content">
+              <h3>AI Ethics and Governance in 2025</h3>
+              <p>Explore the evolving landscape of AI ethics, including recent regulations, ethical guidelines, and best practices for developing responsible AI systems. Learn about the latest developments in AI bias mitigation and fairness.</p>
+              <div class="blog-meta">
+                <span class="date">May 22, 2025</span>
+                <span class="tags">#AI #Ethics #Governance</span>
+              </div>
+              <a href="blog/ai-ethics-governance.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-post card">
+            <div class="blog-image">
+              <img src="images/blog/AI Data Processing.png" alt="Multi-Modal Learning">
+            </div>
+            <div class="blog-content">
+              <h3>The Rise of Multi-Modal Learning</h3>
+              <p>Discover how AI is evolving beyond text-only models with multi-modal learning approaches. Learn about the latest developments in combining vision, text, and audio in a single model, and their implications for future AI applications.</p>
+              <div class="blog-meta">
+                <span class="date">May 22, 2025</span>
+                <span class="tags">#MultiModal #AI #DeepLearning</span>
+              </div>
+              <a href="blog/multi-modal-learning.html" class="read-more">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+
     <section id="education" class="education section">
       <div class="container">
         <h2 data-aos="fade-up">Education</h2>
         <div class="education-timeline" data-aos="fade-up">
-          <div class="education-item">
-            <div class="education-date">2025 - Present</div>
+          <div class="education-item">            <div class="education-date">2025 - Present</div>
             <div class="education-content">
               <h3>Software Engineering</h3>
               <p class="institution">Power Learn Project</p>
@@ -297,36 +555,6 @@
       </div>
     </section>
 
-    <section id="blog" class="blog section">
-      <div class="container">
-        <h2 data-aos="fade-up">Latest Blog Posts</h2>
-        <div class="blog-grid">
-          <article class="blog-card" data-aos="fade-up">
-            <div class="blog-image">
-              <img src="images/blog/ai.png" alt="AI in Web Development">
-            </div>
-            <div class="blog-content">
-              <h3>The Future of AI in Web Development</h3>
-              <p class="blog-meta">April 21, 2025 • 5 min read</p>
-              <p>Exploring how artificial intelligence is transforming the web development landscape...</p>
-              <a href="blog/ai-in-web-development.html" class="read-more">Read More →</a>
-            </div>
-          </article>
-          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="blog-image">
-              <img src="images/blog/react.jpg" alt="React Best Practices">
-            </div>
-            <div class="blog-content">
-              <h3>React Best Practices in 2024</h3>
-              <p class="blog-meta">March 10, 2024 • 4 min read</p>
-              <p>Essential tips and practices for building scalable React applications...</p>
-              <a href="blog/react-best-practices.html" class="read-more">Read More →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="contact" class="contact section">
       <div class="container">
         <h2 data-aos="fade-up">Get In Touch</h2>
@@ -351,7 +579,7 @@
             <div class="socials">
               <a href="https://www.instagram.com/mrksalvn" target="_blank"><i class="fab fa-instagram"></i></a>
               <a href="https://github.com/marksabuto" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/marks-abuto/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/marksabuto/" target="_blank"><i class="fab fa-linkedin"></i></a>
               <a href="https://www.x.com/marksabuto/" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
           </div>
